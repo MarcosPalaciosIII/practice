@@ -28,7 +28,7 @@ input[type=text]:focus, textarea:focus {
   box-shadow: 0 0 5px rgba(81, 203, 238, 1);
   padding: 3px 0px 3px 3px;
   margin: 5px 1px 3px 0px;
-  border: 1px solid rgba(81, 203, 238, 1);
+  /* border: 1px solid rgba(81, 203, 238, 1); */
 }
 
 nav {
@@ -36,6 +36,13 @@ nav {
   justify-content: space-between;
   align-items: center;
   background-color: #0e0b16;
+  flex-direction: row;
+  height: 4em;
+}
+
+.nav-btns {
+  display: flex;
+  flex-direction: row;
 }
 
 .panel {
@@ -60,7 +67,7 @@ nav {
   display: inline-block;
   width: 100%;
   font-weight: 200;
-  color: #FE5F01;
+  color: #265a88;
   font-family: 'Vibur', cursive;
 }
 .panel h4 {
@@ -69,23 +76,28 @@ nav {
   text-align: left;
   padding-left: 15px;
   padding-bottom: 5px;
-  color: #ff9e02;
-  border-bottom: 1px solid #ffbe02;
+  color: #262a88;
+  border-bottom: 1px solid #265a88;
 }
 
 .btn {
-  border: 1px solid #d44f01;
+  border: 1px solid #71f3c1;
   padding: 10px;
   border-radius: 20px;
   width: 100%;
   margin-top: 15px;
-  background: #FE5F01;
+  background: #71a3c1;
   font-size: 16px;
   font-weight: 400;
   cursor: pointer;
   color: #fff;
   position: relative;
   overflow: hidden;
+}
+
+.btn:hover {
+  background: #265a88;
+  border: 1px solid #71a3c1;
 }
 
 .log-form {
@@ -225,7 +237,7 @@ nav {
 }
 
 .form-group {
-  border-bottom: 1px solid #ffbe02;
+  border-bottom: 1px solid #265a88;
   position: relative;
   margin-bottom: 15px;
 }
@@ -250,7 +262,7 @@ nav {
   z-index: 2;
   padding: 5px;
   background: none;
-  color: #FE5F01;
+  color: #3B579D;
   width: 100%;
 }
 .form-group .form-control:focus, .form-group .form-control:active {
@@ -260,7 +272,7 @@ nav {
 }
 .form-group .form-label {
   font-weight: 300;
-  color: #ff8801;
+  color: #00ACED;
   font-size: 14px;
   min-height: 17px;
   text-align: left;
@@ -275,12 +287,12 @@ nav {
 .form-group.focus:after {
   opacity: 1;
   width: 100%;
-  background: #FE5F01;
+  background: #3B579D;
 }
 .form-group.focus .form-label, .form-group.filled .form-label {
   top: -7px;
   font-size: 10px;
-  color: #FE5F01;
+  color: #3B579D;
 }
 
 .ripple {
@@ -317,7 +329,7 @@ nav {
 .polling_message {
   color: #d5d5d5;
   float: left;
-  margin-right: 2%;
+  margin-right: 44%;
   text-align: center;
 }
 
