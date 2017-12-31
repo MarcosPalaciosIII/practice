@@ -3,7 +3,7 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   padding: 0 10em;
-  align-items: center;
+  align-items: baseline;
 }
 
 a {
@@ -13,4 +13,12 @@ a {
   border-radius: .7em;
   display: inline-block;
   padding: 0.5em 1em;
+}
+
+.main-body {
+  padding: 0 10em;
+}
+
+.currentTime, .currentDay {
+  font-size: 2em;
 }

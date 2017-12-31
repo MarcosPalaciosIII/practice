@@ -16,6 +16,8 @@ function timer() {
 
   document.querySelector(".currentTime").innerHTML = hour + ":" + minutes + ":" + seconds;
 
+  document.querySelector(".currentDay").innerHTML = currentDay;
+
   setTimeout(function () {
     timer();
   },
