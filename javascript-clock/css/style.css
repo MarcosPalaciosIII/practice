@@ -1,0 +1,16 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 10em;
+  align-items: center;
+}
+
+a {
+  font-size: 1.2em;
+  border: 1px solid midnightblue;
+  background: skyblue;
+  border-radius: .7em;
+  display: inline-block;
+  padding: 0.5em 1em;
+}
