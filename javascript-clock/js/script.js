@@ -7,10 +7,18 @@ function timer() {
   var hour = currentDay.getHours();
   var minutes = currentDay.getMinutes();
   var seconds = currentDay.getSeconds();
+  var dayList = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+  var monthList = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  var day = currentDay.getDay();
+  var month = currentDay.getMonth();
+  var dayOfMonth = currentDay.getDate();
+  var year = currentDay.getFullYear();
 
   hour = currentTime(hour);
   minutes = currentTime(minutes);
   seconds = currentTime(seconds);
+
+  dayOfMonth = currentTime(dayOfMonth);
 
   function currentTime(i) {
     if (i < 10) {
@@ -21,11 +29,11 @@ function timer() {
 
   // document.querySelector(".currentTime").innerHTML = hour + ":" + minutes + ":" + seconds;
 
-  $(".currentTime").text(hour + ":" + minutes + ":" + seconds);
+  $(".currentTime").text("The Current Time is: " + hour + ":" + minutes + ":" + seconds + " (EST)");
 
   // document.querySelector(".currentDay").innerHTML = currentDay;
 
-  $(".currentDay").text(currentDay);
+  $(".currentDay").text("Today is: " + dayList[day] + "- " + monthList[month] + " " + dayOfMonth + ", " + year);
 
   setTimeout(function () {
     timer();
