@@ -1,9 +1,14 @@
+// var currentDayButton = document.querySelector(".currentDayButton");
+//
+// var currentDay = document.querySelector(".currentDay");
+
 function timer() {
   var currentDay = new Date();
   var hour = currentDay.getHours();
   var minutes = currentDay.getMinutes();
   var seconds = currentDay.getSeconds();
 
+  hour = currentTime(hour);
   minutes = currentTime(minutes);
   seconds = currentTime(seconds);
 
@@ -14,9 +19,13 @@ function timer() {
     return i;
   }
 
-  document.querySelector(".currentTime").innerHTML = hour + ":" + minutes + ":" + seconds;
+  // document.querySelector(".currentTime").innerHTML = hour + ":" + minutes + ":" + seconds;
 
-  document.querySelector(".currentDay").innerHTML = currentDay;
+  $(".currentTime").text(hour + ":" + minutes + ":" + seconds);
+
+  // document.querySelector(".currentDay").innerHTML = currentDay;
+
+  $(".currentDay").text(currentDay);
 
   setTimeout(function () {
     timer();
@@ -26,6 +35,17 @@ function timer() {
 
 }
 
+$(".currentDayButton").on("click", function () {
+  if($(".currentDay").hasClass("hidden")) {
+    $(".currentDay").removeClass("hidden");
+  }  else {
+    $(".currentDay").addClass("hidden");
+  }
+});
+
+// currentDayButton.click = function () {
+//   currentDay.toggle("hidden");
+// };
 
 
 
