@@ -24,6 +24,10 @@ h1 {
   font-family: cursive;
 }
 
+body {
+  background-color: antiquewhite;
+}
+
 .main-body {
   padding: 0 10em;
   display: flex;
