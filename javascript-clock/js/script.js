@@ -1,6 +1,16 @@
-// var currentDayButton = document.querySelector(".currentDayButton");
-//
-// var currentDay = document.querySelector(".currentDay");
+var gifArray = [
+  "public/gif/clock.gif",
+  "public/gif/drWho1.gif",
+  "public/gif/bigBangTheory1.gif",
+  "public/gif/randomElevator.gif"
+];
+
+var imageArray = [
+  "public/image/spaceballs1.jpg",
+  "public/image/spaceballs2.jpg",
+  "public/image/rockPaperScissors.jpg",
+  "public/image/funnyDog1.jpg"
+];
 
 function timer() {
   var currentDay = new Date();
@@ -27,11 +37,9 @@ function timer() {
     return i;
   }
 
-  // document.querySelector(".currentTime").innerHTML = hour + ":" + minutes + ":" + seconds;
 
   $(".currentTime").text("The Current Time is: " + hour + ":" + minutes + ":" + seconds + " (EST)");
 
-  // document.querySelector(".currentDay").innerHTML = currentDay;
 
   $(".currentDay").text("Today is: " + dayList[day] + "- " + monthList[month] + " " + dayOfMonth + ", " + year);
 
@@ -43,6 +51,14 @@ function timer() {
 
 }
 
+$(".gif-button").on("click", function () {
+  $(".gifs").attr("src", gifArray[Math.floor(Math.random() * gifArray.length)]);
+});
+
+$(".image-button").on("click", function () {
+  $(".images").attr("src", imageArray[Math.floor(Math.random() * imageArray.length)]);
+});
+
 $(".currentDayButton").on("click", function () {
   if($(".currentDay").hasClass("hidden")) {
     $(".currentDay").removeClass("hidden");
@@ -50,12 +66,6 @@ $(".currentDayButton").on("click", function () {
     $(".currentDay").addClass("hidden");
   }
 });
-
-// currentDayButton.click = function () {
-//   currentDay.toggle("hidden");
-// };
-
-
 
 
 console.log(timer());
