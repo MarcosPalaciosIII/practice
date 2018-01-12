@@ -30,6 +30,7 @@ function timer() {
 
   dayOfMonth = currentTime(dayOfMonth);
 
+
   function currentTime(i) {
     if (i < 10) {
       i = "0" + i;
@@ -41,29 +42,60 @@ function timer() {
   $(".currentTime").text("The Current Time is: " + hour + ":" + minutes + ":" + seconds + " (EST)");
 
 
-  $(".currentDay").text("Today is: " + dayList[day] + "- " + monthList[month] + " " + dayOfMonth + ", " + year);
+  $(".currentDay").text("Today is: " + dayList[day] + " - " + monthList[month] + " " + dayOfMonth + ", " + year);
 
   setTimeout(function () {
     timer();
-  },
+    },
    1000
- );
-
+  );
 }
 
 $(".gif-button").on("click", function () {
   $(".gifs").attr("src", gifArray[Math.floor(Math.random() * gifArray.length)]);
+  setTimeout(function () {
+    if($(".gifs").hasClass("slideInLeft")) {
+      $(".gifs").removeClass("slideInLeft");
+    }
+    },
+  1000
+  );
+  $(".gifs").addClass("slideInLeft");
 });
+
 
 $(".image-button").on("click", function () {
   $(".images").attr("src", imageArray[Math.floor(Math.random() * imageArray.length)]);
+  setTimeout(function () {
+    if($(".images").hasClass("slideInRight")) {
+      $(".images").removeClass("slideInRight");
+    }
+    },
+  1000
+  );
+  $(".images").addClass("slideInRight");
 });
+
 
 $(".currentDayButton").on("click", function () {
   if($(".currentDay").hasClass("hidden")) {
     $(".currentDay").removeClass("hidden");
+    $(".currentDay").addClass("flip");
+    setTimeout(function () {
+      // if($(".currentDay").hasClass("flip")) {
+      // }
+      $(".currentDay").removeClass("flip");
+    },
+    700
+    );
   }  else {
-    $(".currentDay").addClass("hidden");
+    $(".currentDay").addClass("flip");
+    setTimeout(function () {
+      $(".currentDay").addClass("hidden");
+      $(".currentDay").removeClass("flip");
+    },
+    700
+    );
   }
 });
 

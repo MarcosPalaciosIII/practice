@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display');
+
 nav {
   display: flex;
   flex-direction: row;
@@ -15,6 +17,7 @@ a {
   display: inline-block;
   padding: 0.5em 1em;
   color: midnightblue;
+  font-family: "Sedgwick Ave Display", sans-serif;
 }
 
 hr {
@@ -39,6 +42,7 @@ img {
   border-radius: .7em;
   display: inline-block;
   padding: 0.5em 1em;
+  font-family: "Sedgwick Ave Display", sans-serif;
 }
 
 .gif-button, .image-button {
@@ -51,6 +55,13 @@ img {
   color: midnightblue;
   border: 1px solid midnightblue;
   background: skyblue;
+}
+
+.gif-button:focus, .image-button:focus {
+  color: midnightblue;
+  background: skyblue;
+  border: 1px solid midnightblue;
+  outline: none;
 }
 
 .main-body {
@@ -69,6 +80,10 @@ img {
   background: lightseagreen;
   width: 8em;
 }
+
+/* .currentDay {
+  animation-name: slideIn;
+} */
 
 .img-container {
   display: flex;
