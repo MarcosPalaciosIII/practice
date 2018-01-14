@@ -52,28 +52,48 @@ function timer() {
 }
 
 $(".gif-button").on("click", function () {
-  $(".gifs").attr("src", gifArray[Math.floor(Math.random() * gifArray.length)]);
   setTimeout(function () {
-    if($(".gifs").hasClass("slideInLeft")) {
-      $(".gifs").removeClass("slideInLeft");
-    }
+    $(".gifs").attr("src", gifArray[Math.floor(Math.random() * gifArray.length)]);
+      if($(".gifs").hasClass("slideOutLeft")) {
+      $(".gifs").removeClass("slideOutLeft");
+      $(".gifs").addClass("hidden");
+      }
     },
+  999
+  );
+  setTimeout(function () {
+    if($(".gifs").hasClass("hidden")) {
+      $(".gifs").removeClass("hidden");
+      $(".gifs").addClass("slideInLeft");
+    }
+  },
   1000
   );
-  $(".gifs").addClass("slideInLeft");
+  $(".gifs").removeClass("slideInLeft");
+  $(".gifs").addClass("slideOutLeft");
 });
 
 
 $(".image-button").on("click", function () {
-  $(".images").attr("src", imageArray[Math.floor(Math.random() * imageArray.length)]);
   setTimeout(function () {
-    if($(".images").hasClass("slideInRight")) {
-      $(".images").removeClass("slideInRight");
-    }
+    $(".images").attr("src", imageArray[Math.floor(Math.random() * imageArray.length)]);
+      if($(".images").hasClass("slideOutRight")) {
+      $(".images").removeClass("slideOutRight");
+      $(".images").addClass("hidden");
+      }
     },
+  999
+  );
+  setTimeout(function () {
+    if($(".images").hasClass("hidden")) {
+      $(".images").removeClass("hidden");
+      $(".images").addClass("slideInRight");
+    }
+  },
   1000
   );
-  $(".images").addClass("slideInRight");
+  $(".images").removeClass("slideInRight");
+  $(".images").addClass("slideOutRight");
 });
 
 
