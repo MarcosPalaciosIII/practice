@@ -54,8 +54,8 @@ function timer() {
 $(".gif-button").on("click", function () {
   setTimeout(function () {
     $(".gifs").attr("src", gifArray[Math.floor(Math.random() * gifArray.length)]);
-      if($(".gifs").hasClass("slideOutLeft")) {
-      $(".gifs").removeClass("slideOutLeft");
+      if($(".gifs").hasClass("fadeOutLeft")) {
+      $(".gifs").removeClass("fadeOutLeft");
       $(".gifs").addClass("hidden");
       }
     },
@@ -64,21 +64,21 @@ $(".gif-button").on("click", function () {
   setTimeout(function () {
     if($(".gifs").hasClass("hidden")) {
       $(".gifs").removeClass("hidden");
-      $(".gifs").addClass("slideInLeft");
+      $(".gifs").addClass("fadeInLeft");
     }
   },
   1000
   );
-  $(".gifs").removeClass("slideInLeft");
-  $(".gifs").addClass("slideOutLeft");
+  $(".gifs").removeClass("fadeInLeft");
+  $(".gifs").addClass("fadeOutLeft");
 });
 
 
 $(".image-button").on("click", function () {
   setTimeout(function () {
     $(".images").attr("src", imageArray[Math.floor(Math.random() * imageArray.length)]);
-      if($(".images").hasClass("slideOutRight")) {
-      $(".images").removeClass("slideOutRight");
+      if($(".images").hasClass("fadeOutRight")) {
+      $(".images").removeClass("fadeOutRight");
       $(".images").addClass("hidden");
       }
     },
@@ -87,13 +87,13 @@ $(".image-button").on("click", function () {
   setTimeout(function () {
     if($(".images").hasClass("hidden")) {
       $(".images").removeClass("hidden");
-      $(".images").addClass("slideInRight");
+      $(".images").addClass("fadeInRight");
     }
   },
   1000
   );
-  $(".images").removeClass("slideInRight");
-  $(".images").addClass("slideOutRight");
+  $(".images").removeClass("fadeInRight");
+  $(".images").addClass("fadeOutRight");
 });
 
 
