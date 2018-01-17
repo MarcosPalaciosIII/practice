@@ -6,7 +6,7 @@ nav {
   justify-content: space-between;
   padding: 0 10em;
   align-items: center;
-  background: lightgrey;
+  background: lightslategrey;
 }
 
 a {
@@ -23,7 +23,7 @@ a {
 hr {
   margin: 0;
   padding-bottom: 1px;
-  background-color: lightgrey;
+  background-color: lightslategrey;
 }
 
 h1 {
@@ -31,7 +31,7 @@ h1 {
 }
 
 body {
-  background-color: antiquewhite;
+  background-color: snow;
 }
 
 img {
