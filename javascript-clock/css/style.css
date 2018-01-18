@@ -21,7 +21,7 @@ a {
 }
 
 hr {
-  margin: 0;
+  margin: 0 0 20px 0;
   padding-bottom: 1px;
   background-color: lightslategrey;
 }
@@ -34,9 +34,24 @@ body {
   background-color: snow;
 }
 
-img {
+.gifs, .images {
   width: 24vw;
   height: 100%;
+}
+
+.pirate-images {
+  width: 15vw;
+  height: 65%;
+}
+
+p {
+  width: 23em;
+  padding: 10px 20px 0;
+  text-align: center;
+}
+
+.paragraph-divider {
+  border-left: 1px solid lightgrey;
 }
 
 .btn {
@@ -96,4 +111,9 @@ img {
 .image-buttons {
   display: flex;
   justify-content: space-around;
+}
+
+.paragraph-div {
+  display: flex;
+  justify-content: center;
 }
