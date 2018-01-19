@@ -18,13 +18,13 @@
 
     <nav>
       <div>
-        <a href=""> Home <span class="glyphicon glyphicon-home"></span></a>
+        <button href="" class="nav-btn homeBtn"> Home <span class="glyphicon glyphicon-home"></span></button>
       </div>
       <div>
         <h1> Javascript Clock </h1>
       </div>
       <div>
-        <a href=""> Join Us <span class="glyphicon glyphicon-thumbs-up"></span> </a>
+        <button href="" class="nav-btn joinUsBtn"> Join Us <span class="glyphicon glyphicon-thumbs-up"></span> </button>
       </div>
     </nav>
 
@@ -32,71 +32,114 @@
 
     <div class="main-body">
 
-      <div class="currentDay hidden animated"></div>
-      <div class="currentTime"></div>
+      <div class="logIn-div hidden animated">
 
-      <hr />
+        <h2> Log In </h2>
 
-      <button class="btn currentDayButton"> Current Day </button>
+        <p class="error-message">  </p>
 
-      <br />
 
-      <div class="media-container">
+        <form id="form" method="post" action="/process-login">
+          <label for="email-input"> Email </label>
+          <input id="email-input" type="email" placeholder="e.g. tyrion@casterly.rock" name="LoginEmail" />
+          <br />
+          <br />
 
-        <div class="image-buttons">
+          <label for="password-input"> Password </label>
+          <input id="passwrod-input" type="password" name="LoginPassword" />
+          <br />
+          <br />
 
-          <button class="btn gif-button"> Random Gif </button>
-          <button class="btn image-button"> Random Image </button>
+          <button> Log In </button>
+          <br />
+          <br />
 
-        </div>
 
-        <br />
-
-        <div class="img-container">
-          <div class="gifs-div">
-
-            <img class="gifs animated" src="https://media.giphy.com/media/KaMY5em3TlmjC/giphy.gif" />
+          <div class="login-logo-div">
+            <a class="logo" href="/facebook/login"> <img class="login-logo" src="public/image/facebookLogo.png" /> </a>
+            <a class="logo" href="/google/login"> <img class="login-logo" src="public/image/googleLogo.png" /> </a>
+            <br />
           </div>
+          <br />
+          <p>
+            Don't have an account?
+            <a href="/signup"> Sign Up </a>
+          </p>
+        </form>
 
-          <div>
-            <img class="images animated" src="http://cdn.lifedaily.com/wp-content/uploads/2014/07/Spaceballs-Barf.jpg" />
-          </div>
 
-        </div>
-        <br />
+      </div>
+
+      <div class="homePage-div animated">
+
+        <div class="currentDay hidden animated"></div>
+        <div class="currentTime"></div>
+
         <hr />
 
+        <button class="btn currentDayButton"> Current Day </button>
+
+        <br />
+
+        <div class="media-container">
+
+          <div class="image-buttons">
+
+            <button class="btn gif-button"> Random Gif </button>
+            <button class="btn image-button"> Random Image </button>
+
+          </div>
+
+          <br />
+
+          <div class="img-container">
+            <div class="gifs-div">
+
+              <img class="gifs animated" src="https://media.giphy.com/media/KaMY5em3TlmjC/giphy.gif" />
+            </div>
+
+            <div>
+              <img class="images animated" src="http://cdn.lifedaily.com/wp-content/uploads/2014/07/Spaceballs-Barf.jpg" />
+            </div>
+
+          </div>
+          <br />
+          <hr />
+
+
+        </div>
+
+        <div class="paragraph-div">
+
+          <p>
+            <img class="pirate-images" src="http://www.wtv-zone.com/morningstar/KEVIN/piratering.gif" />
+            <br />
+            <br />
+
+            Cable heave down interloper pressgang gabion Spanish Main overhaul Letter of Marque plunder Pirate Round. Cat o'nine tails scuttle reef me scallywag code of conduct Corsair lookout interloper jolly boat. Jolly boat square-rigged shrouds avast sloop hearties black spot Corsair pink aye.
+
+          </p>
+          <p class="paragraph-divider">
+            <img class="pirate-images" src="http://talklikeapirate.com/wordpress/wp-content/uploads/2016/08/cropped-hooks-icon-1.png" />
+            <br />
+            <br />
+
+            Come about line nipper Shiver me timbers ho cutlass keelhaul lateen sail fluke splice the main brace. Schooner boatswain Admiral of the Black run a rig Sea Legs scuppers piracy bilge sloop Yellow Jack. Deadlights wherry Barbary Coast run a rig rigging bilge rat chandler hail-shot grog mutiny.
+
+          </p>
+          <p class="paragraph-divider">
+            <img class="pirate-images" src="http://laoblogger.com/images/pirate-ship-images-5.jpg" />
+            <br />
+            <br />
+
+            Heave to cog brig trysail Plate Fleet Davy Jones' Locker lookout jury mast clap of thunder grapple. Mizzenmast broadside Buccaneer parrel doubloon holystone spanker fluke wench bucko. Scuttle bucko clap of thunder square-rigged loaded to the gunwalls squiffy pressgang cutlass nipper starboard.
+
+          </p>
+
+        </div>
 
       </div>
 
-      <div class="paragraph-div">
-
-        <p>
-          <img class="pirate-images" src="http://www.wtv-zone.com/morningstar/KEVIN/piratering.gif" />
-          <br />
-          <br />
-
-          Cable heave down interloper pressgang gabion Spanish Main overhaul Letter of Marque plunder Pirate Round. Cat o'nine tails scuttle reef me scallywag code of conduct Corsair lookout interloper jolly boat. Jolly boat square-rigged shrouds avast sloop hearties black spot Corsair pink aye.
-
-        </p>
-        <p class="paragraph-divider">
-          <img class="pirate-images" src="http://talklikeapirate.com/wordpress/wp-content/uploads/2016/08/cropped-hooks-icon-1.png" />
-          <br />
-          <br />
-
-          Come about line nipper Shiver me timbers ho cutlass keelhaul lateen sail fluke splice the main brace. Schooner boatswain Admiral of the Black run a rig Sea Legs scuppers piracy bilge sloop Yellow Jack. Deadlights wherry Barbary Coast run a rig rigging bilge rat chandler hail-shot grog mutiny.
-
-        </p>
-        <p class="paragraph-divider">
-          <img class="pirate-images" src="http://laoblogger.com/images/pirate-ship-images-5.jpg" />
-          <br />
-          <br />
-
-          Heave to cog brig trysail Plate Fleet Davy Jones' Locker lookout jury mast clap of thunder grapple. Mizzenmast broadside Buccaneer parrel doubloon holystone spanker fluke wench bucko. Scuttle bucko clap of thunder square-rigged loaded to the gunwalls squiffy pressgang cutlass nipper starboard.
-
-        </p>
-
-      </div>
 
       <br /><br /><br />
 

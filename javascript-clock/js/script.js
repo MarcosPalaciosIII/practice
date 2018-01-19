@@ -119,5 +119,43 @@ $(".currentDayButton").on("click", function () {
   }
 });
 
+$(".joinUsBtn").on("click", function () {
+  if($(".logIn-div").hasClass("hidden")) {
+    $(".homePage-div").addClass("fadeOut");
+    $(".homePage-div").removeClass("fadeIn");
+    setTimeout(function () {
+      $(".homePage-div").addClass("hidden");
+      $(".homePage-div").removeClass("fadeOut");
+    },
+    700
+    );
+    setTimeout(function () {
+      $(".logIn-div").addClass("fadeIn");
+      $(".logIn-div").removeClass("hidden");
+    },
+    700
+    );
+  }
+});
+
+$(".homeBtn").on("click", function () {
+  if($(".homePage-div").hasClass("hidden")) {
+    $(".logIn-div").addClass("fadeOut");
+    $(".logIn-div").removeClass("fadeIn");
+    setTimeout(function () {
+      $(".logIn-div").addClass("hidden");
+      $(".logIn-div").removeClass("fadeOut");
+    },
+    700
+    );
+    setTimeout(function() {
+      $(".homePage-div").addClass("fadeIn");
+      $(".homePage-div").removeClass("hidden");
+    },
+    700
+    );
+  }
+});
+
 
 console.log(timer());
