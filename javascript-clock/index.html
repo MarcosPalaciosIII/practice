@@ -24,13 +24,72 @@
         <h1> Javascript Clock </h1>
       </div>
       <div>
-        <button href="" class="nav-btn joinUsBtn"> Log In <span class="glyphicon glyphicon-thumbs-up"></span> </button>
+        <button href="" class="nav-btn signInBtn"> Sign In <span class="glyphicon glyphicon-list-alt"></span> </button>
+
+        <button href="" class="nav-btn logInBtn"> Log In <span class="glyphicon glyphicon-thumbs-up"></span> </button>
       </div>
     </nav>
 
     <hr />
 
     <div class="main-body">
+
+      <div class="signUp-div animated">
+
+        <h2> Sign Up </h2>
+
+
+        <p class="error-message"></p>
+
+
+        <form id="form" method="post" action="/process-signup">
+
+          <label for="full-name-input"></label>
+          <input id="full-name-input" type="text" placeholder="Full Name" name="signupFullName" />
+          <br />
+
+
+          <label for="email-input"></label>
+          <input id="email-input" type="email" placeholder=" Email Address" name="signupEmail" />
+          <br />
+
+
+          <label for="username-input"></label>
+          <input id="username-input" type="text" placeholder="Username" name="signupUsername" />
+          <br />
+
+          <label for="user-avatar-input"></label>
+          <input id="user-avatar-input" type="text" placeholder="Avatar URL" name="signupAvatar" />
+          <br />
+
+          <br />
+
+
+          <label for="password-input"></label>
+          <input id="password-input" type="password" placeholder="Password" name="signupPassword" />
+          <br />
+          <br  />
+
+          <button> Submit </button>
+          <br />
+          <br />
+          <br />
+
+          <div class="login-logo-div">
+            <a href="/facebook/login"> <img class="login-logo" src="public/image/facebookLogo.png" /> </a>
+            <a href="/google/login"> <img class="login-logo" src="public/image/googleLogo.png" /> </a>
+            <br />
+          </div>
+
+          <br />
+
+          <p>
+            Already have an account?
+            <a href="/login"> Log In </a>
+          </p>
+        </form>
+
+      </div>
 
       <div class="logIn-div hidden animated">
 
@@ -63,7 +122,7 @@
           <br />
           <p>
             Don't have an account?
-            <a href="/signup"> Sign Up </a>
+            <a href=""> Sign Up </a>
           </p>
         </form>
 
