@@ -120,7 +120,7 @@ $(".currentDayButton").on("click", function () {
 });
 
 $(".logInBtn").on("click", function () {
-  if($(".logIn-div").hasClass("hidden")) {
+  if($(".logIn-div").hasClass("hidden") && (!$(".homePage-div").hasClass("hidden"))) {
     $(".homePage-div").addClass("fadeOut");
     $(".homePage-div").removeClass("fadeIn");
     setTimeout(function () {
@@ -133,13 +133,28 @@ $(".logInBtn").on("click", function () {
       $(".logIn-div").addClass("fadeIn");
       $(".logIn-div").removeClass("hidden");
     },
+    701
+    );
+  } else if ($(".logIn-div").hasClass("hidden") && ($(".homePage-div").hasClass("hidden"))) {
+    $(".signUp-div").addClass("fadeOut");
+    $(".signUp-div").removeClass("fadeIn");
+    setTimeout(function () {
+      $(".signUp-div").addClass("hidden");
+      $(".signUp-div").removeClass("fadeOut");
+    },
     700
+    );
+    setTimeout(function () {
+      $(".logIn-div").addClass("fadeIn");
+      $(".logIn-div").removeClass("hidden");
+    },
+    701
     );
   }
 });
 
-$(".signInBtn").on("click", function () {
-  if($(".logIn-div").hasClass("hidden")) {
+$(".signUpBtn").on("click", function () {
+  if($(".signUp-div").hasClass("hidden") && (!$(".homePage-div").hasClass("hidden"))) {
     $(".homePage-div").addClass("fadeOut");
     $(".homePage-div").removeClass("fadeIn");
     setTimeout(function () {
@@ -149,16 +164,31 @@ $(".signInBtn").on("click", function () {
     700
     );
     setTimeout(function () {
-      $(".logIn-div").addClass("fadeIn");
-      $(".logIn-div").removeClass("hidden");
+      $(".signUp-div").addClass("fadeIn");
+      $(".signUp-div").removeClass("hidden");
+    },
+    701
+    );
+  } else if ($(".signUp-div").hasClass("hidden") && ($(".homePage-div").hasClass("hidden"))) {
+    $(".logIn-div").addClass("fadeOut");
+    $(".logIn-div").removeClass("fadeIn");
+    setTimeout(function () {
+      $(".logIn-div").addClass("hidden");
+      $(".logIn-div").removeClass("fadeOut");
     },
     700
+    );
+    setTimeout(function () {
+      $(".signUp-div").addClass("fadeIn");
+      $(".signUp-div").removeClass("hidden");
+    },
+    701
     );
   }
 });
 
 $(".homeBtn").on("click", function () {
-  if($(".homePage-div").hasClass("hidden")) {
+  if($(".homePage-div").hasClass("hidden") && !$(".logIn-div").hasClass("hidden")) {
     $(".logIn-div").addClass("fadeOut");
     $(".logIn-div").removeClass("fadeIn");
     setTimeout(function () {
@@ -171,10 +201,22 @@ $(".homeBtn").on("click", function () {
       $(".homePage-div").addClass("fadeIn");
       $(".homePage-div").removeClass("hidden");
     },
+    701
+    );
+  } else if ($(".homePage-div").hasClass("hidden") && !$(".signUp-div").hasClass("hidden")) {
+    $(".signUp-div").addClass("fadeOut");
+    $(".signUp-div").removeClass("fadeIn");
+    setTimeout(function () {
+      $(".signUp-div").addClass("hidden");
+      $(".signUp-div").removeClass("fadeOut");
+    },
     700
+    );
+    setTimeout(function() {
+      $(".homePage-div").addClass("fadeIn");
+      $(".homePage-div").removeClass("hidden");
+    },
+    701
     );
   }
 });
-
-
-console.log(timer());
