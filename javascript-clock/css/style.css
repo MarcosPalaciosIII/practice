@@ -18,6 +18,7 @@ nav {
   padding: 0.5em 1em;
   color: midnightblue;
   font-family: "Sedgwick Ave Display", sans-serif;
+  outline: none;
 }
 
 hr {
