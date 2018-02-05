@@ -100,19 +100,19 @@ $(".image-button").on("click", function () {
 $(".currentDayButton").on("click", function () {
   if($(".currentDay").hasClass("hidden")) {
     $(".currentDay").removeClass("hidden");
-    $(".currentDay").addClass("flip");
+    $(".currentDay").addClass("rotateIn");
     setTimeout(function () {
       // if($(".currentDay").hasClass("flip")) {
       // }
-      $(".currentDay").removeClass("flip");
+      $(".currentDay").removeClass("rotateIn");
     },
     700
     );
   }  else {
-    $(".currentDay").addClass("flip");
+    $(".currentDay").addClass("rotateOut");
     setTimeout(function () {
       $(".currentDay").addClass("hidden");
-      $(".currentDay").removeClass("flip");
+      $(".currentDay").removeClass("rotateOut");
     },
     700
     );
