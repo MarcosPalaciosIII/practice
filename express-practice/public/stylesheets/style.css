@@ -1,8 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash');
+
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+h1 {
+  font-family: 'Berkshire Swash', cursive;
+  margin-top: 0px;
+  padding: 14px;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+nav {
+  background: slategrey;
+}
+
+.index-body {
+  padding: 0 50px;
 }
