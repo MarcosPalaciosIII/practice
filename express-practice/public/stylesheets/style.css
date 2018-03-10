@@ -22,7 +22,7 @@ h2 {
 
 nav {
   /* background: slategrey; */
-  padding: 16px 0 5px;
+  padding: 16px 40px 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,6 +39,5 @@ hr {
 }
 
 .nav-links {
-  padding: 0 30px;
   font-size: 17px;
 }
