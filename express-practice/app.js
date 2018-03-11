@@ -12,7 +12,7 @@ const app = express();
 
 // Load environment variables from the ".env" files
 // (put this before the setupr files since this defines env variables)
-reuire("dotenv").config();
+require("dotenv").config();
 
 // run the code that sets up Mongoose database connection
 require('./config/mongoose-setup');
@@ -58,6 +58,9 @@ app.use((req, res, next) => {
 
 const index = require('./routes/index');
 app.use('/', index);
+
+const myUserRouter = require('./routes/user-router');
+app.user(myUserRouter);
 
 // ---------------------------------------
 
