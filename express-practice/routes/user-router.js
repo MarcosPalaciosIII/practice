@@ -1,8 +1,8 @@
-const express = require('express');
-const bcryst = require('bcrypt');
-const passport = require('passport');
+const express = require("express");
+const bcrypt = require("bcrypt");
+const passport = require("passport");
 
-const UserModel = require('../models/user-model');
+const UserModel = require("../models/user-model");
 
 const router = express.Router();
 
@@ -10,14 +10,29 @@ const router = express.Router();
 
 router.get("/signup", (req, res, next) => {
 // redirect to home if you are already logged in
-  if(req.user){
+  if(req.user) {
     res.redirect("/");
     // early return to stop the function since there's an error
-    //(prevents the rest of the code form running
+    // prevents the rest of the code from running
     return;
   }
 
   res.render("user-views/signup-page");
+
+});
+
+
+router.get("/login", (req, res, next) => {
+  // redirect home if already logged in
+  if(req.user) {
+    res.redirect("/");
+    // early return to stop the function since there's an error
+    // prevents the rest of the code from running
+    return;
+  }
+
+  res.render("user-views/login-page");
+
 });
 
 
@@ -36,5 +51,6 @@ router.get('/logout', (req, res, next) => {
     next(err);
   });
 });
+
 
 module.exports = router;

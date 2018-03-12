@@ -60,7 +60,7 @@ const index = require('./routes/index');
 app.use('/', index);
 
 const myUserRouter = require('./routes/user-router');
-app.user(myUserRouter);
+app.use(myUserRouter);
 
 // ---------------------------------------
 
