@@ -23,8 +23,19 @@
 
       </div>
       <div class="nav-links">
-        <a href="/signup"> Sign Up </a>
-        <a href="/login"> Log In </a>
+        <% if (currentUser) { %>
+
+            <b> Hello, <%= currentUser.userName %> </b>
+            <br />
+            <a href="/logout"> Log Out </a>
+
+        <% } else { %>
+
+          <a href="/signup"> Sign Up </a>
+          <a href="/login"> Log In </a>
+
+        <% } %>
+
       </div>
     </nav>
     <hr />

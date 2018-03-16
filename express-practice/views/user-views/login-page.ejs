@@ -1,1 +1,26 @@
-<h2> Login Page </h2>
+<div>
+
+  <h2> Login Page </h2>
+
+  <% if (typeof errorMessage !== "undefined") { %>
+          <p class="error-message"> <%= errorMessage %> </p>
+          <% } %>
+
+
+  <form id="form" method="post" action="/process-login">
+    <label for="email-input"> Email </label>
+    <input id="email-input" type="email" placeholder="e.g. tyrion@casterly.rock" name="LoginEmail" />
+    <br />
+    <br />
+
+    <label for="password-input"> Password </label>
+    <input id="passwrod-input" type="password" name="LoginPassword" />
+    <br />
+    <br />
+
+    <button> Log In </button>
+    <br />
+    <br />
+  </form>
+
+</div>
