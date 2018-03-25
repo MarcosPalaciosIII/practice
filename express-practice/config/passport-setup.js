@@ -7,7 +7,7 @@ const UserModel = require('../models/user-model');
 // get's called when user logs in.
 passport.serializeUser((userFromDb, cb) => {
     // null is for saying "no errors occurred durring the serialize process"
-  cd(null, userFromDb._id);
+  cb(null, userFromDb._id);
   // saves only the "._id" of the user.
 });
 

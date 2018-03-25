@@ -10,12 +10,12 @@ const userSchema = new Schema(
     },
     email: {
       type: String,
-      required: [true, "Please add a valid email address"]
+      required: [true, "Email is required"],
+      match: [/.+@.+/, "emails must contain an @ sign"]
     },
     encryptedPassword: {
       type: String,
-      required: [true, "Please create a password"],
-      match: [/.+@.+/, "emails must contain an @ sign"]
+      required: [true, "Please create a password"]
     }
   },
   {

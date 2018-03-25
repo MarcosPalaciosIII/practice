@@ -5,7 +5,7 @@ mongoose.Promise = Promise;
 
 // connect mongoose to our app's local database
 mongoose.connect(process.env.DATABASE_URL,
-{useMongooseClient: true})
+{useMongoClient: true})
 .then(() => {
   console.log("Mongoose Connected 👍 👍 👍 👍");
 })
