@@ -25,11 +25,12 @@
       <div class="nav-links">
 
         <a href="/#about"> About </a>
+        <a href="/#contact"> Contact Us </a>
 
         <% if (currentUser) { %>
-
-            <b> Hello, <%= currentUser.userName %> </b>
             <br />
+            <b> Hello, <%= currentUser.userName %> </b>
+
             <a href="/logout"> Log Out </a>
 
         <% } else { %>
