@@ -1,0 +1,8 @@
+.centerContent {
+  display: flex;
+  justify-content: center;
+}
+
+hr {
+  padding-bottom: 30px;
+}
