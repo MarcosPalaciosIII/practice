@@ -39,3 +39,19 @@ def execute(&block)
 end
 
 execute { puts "Hello from inside the execute method!" }
+
+
+
+# to create an array of letters you can use ('a'..'z').to_a for lowercase letter. You can do capital as well
+
+# simple way to get a-z
+# arr = ('a'..'z').to_a
+
+# a bit more complex but good for doing print or puts
+arr = ('a'..'Z').map do |letter|
+  puts letter
+end
+
+# this method will return 1-9 and a-z
+# arr = (0..36).map{|i| i.to_s 36}
+print arr
